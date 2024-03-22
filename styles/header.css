@@ -1,0 +1,110 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10% 2rem;
+    background: rgba(0, 0, 0, 0.368);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    }
+
+.logo {
+    font-size: 16px;
+    color: var(--branco-principal);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo span {
+    text-shadow: 0 0 25px var(--cor-principal);
+}
+
+#icone__menu {
+    color: var(--cor-principal);
+    display: block;
+    width: 60%;
+    font-size: 30px;
+}
+
+.navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 55%;
+    padding: 1rem 3%;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--cor-principal);
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+.navbar a {
+    display: block;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    background: none;
+    color: var(--branco-principal);
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: var(--cor-principal);
+    border-bottom: 3px solid var(--cor-principal);
+}
+
+.container__botao:checked ~ .navbar {
+    display: block;
+}
+
+.container__botao {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    #icone__menu {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end; /* Ajuste isso conforme necessário */
+        align-items: center; /* Ajuste isso conforme necessário */
+        position: static;
+        width: auto;
+        padding: 0;
+        background: none;
+        border: none;
+    }
+
+    .navbar a {
+        margin: 0 1rem; /* Ajuste isso conforme necessário */
+        background: none;
+    }
+
+    .container__botao {
+        display: none;
+    }
+}
+@media screen and (min-width:1728px) {
+    .logo {
+        font-size: 40px;
+    }
+
+    .navbar a{
+        font-size: 30px;
+    }
+}

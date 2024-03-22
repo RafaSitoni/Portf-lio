@@ -1,0 +1,12 @@
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--fundo-2);
+}
+
+.footer .social__copy {
+    text-align: center;
+    padding: 15px;
+    color: var(--branco-principal);
+}

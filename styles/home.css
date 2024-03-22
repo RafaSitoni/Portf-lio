@@ -1,0 +1,282 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    height: 100%;
+    margin: 17rem 0;
+}
+
+.conteudo__home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+span {
+    color: var(--branco-principal);
+}
+
+.conteudo__home h3 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 20px;
+    color: var(--branco-principal);
+    white-space: normal;
+}
+
+.conteudo__home h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--branco-principal);
+}
+
+.img__home {
+    display: none;
+}
+
+.icons__sociais a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid var(--cor-principal);
+    border-radius: 50%;
+    color: var(--cor-principal);
+    margin: 0.5em 0.5em;
+}
+
+.btn {
+    display: flex;
+    padding: 0.3em 0.3em;
+    justify-content: center;
+    background: var(--preto-principal);
+    box-shadow: 0 0 15px var(--cor-principal);
+    border-radius: 8rem;
+    font-size: 18px;
+    color: var(--cor-principal);
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    margin: 2em 0;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--cor-principal);
+    background-color: var(--cor-principal);
+    color: var(--preto-principal);
+}
+
+.btn i {
+    display: flex;
+    align-items: center;
+}
+
+.btn__grupo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.texto__animado{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.texto__animado span{
+    position: relative;
+}
+
+.texto__animado span::before {
+    content: "Web Developer";
+    color: var(--cor-principal);
+    animation: words 20s infinite;
+}
+
+.texto__animado span::after {
+    content: "";
+    background-color: var(--fundo);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--fundo);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}   
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--cor-principal);
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: "Frontend Designer";
+    }
+    21%,
+    40%{
+        content: "Web Designer";
+    }
+    41%,
+    60%{
+        content: "UI / UX Designer";
+    }
+    61%,
+    80%{
+        content: "Web Developer";
+    }
+    81%,
+    100%{
+        content: "Eng. de software";
+    }
+}
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .img__home {
+        display: block;
+        border-radius: 50%;
+        margin-bottom: 4rem;
+    }
+    
+    .img__home img {
+        position: relative;
+        top: 3rem;
+        width: 30vw;
+        border-radius: 50%;
+        box-shadow: 0 0 25px var(--cor-principal);
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+    
+    .img__home img:hover {
+        box-shadow: 0 0 25px var(--cor-principal),
+                    0 0 50px var(--cor-principal),
+                    0 0 100px var(--cor-principal);
+    }
+}
+@media screen and (min-width:1728px) {
+    .conteudo__home {
+        display: flex;
+        flex-direction: row; /* Mantém a direção da linha */
+        justify-content: space-between; /* Espaço entre os elementos */
+        align-items: center; /* Alinha os itens verticalmente */
+    }
+
+    .img__home {
+        width: 25vw;
+        cursor: pointer;
+    }
+
+    .img__home img {
+        margin-left: 20em;
+    }
+
+    .home__info {
+        max-width: calc(70% - 4rem); /* Ajusta o espaço disponível para o texto */
+        text-align: left; /* Alinha o texto à esquerda */
+        margin-right: 10em;
+    }
+
+    .conteudo__home h3 {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    
+    .conteudo__home h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        line-height: 1;
+        margin-right: 4em;
+    }
+
+    .texto__animado {
+        display: flex;
+    }
+
+    .texto__animado span {
+        margin-left: 1rem;
+    }
+
+    .conteudo__home .btn {
+        font-size: 1.5em;
+    }
+
+    .icons__sociais a{
+        font-size: 35px;
+    }
+
+    .icons__sociais a:hover {
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--cor-principal);
+
+}
+}
+@media screen and (min-width:2500px) {
+    .img__home {
+        margin-left: 15em;
+    }
+
+    .home__info {
+        margin-right: 20em;
+    }
+
+    .conteudo__home h3 {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        font-size: 3rem;
+    }
+    
+    .conteudo__home h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        line-height: 1;
+        margin-right: 2em;
+    }
+
+    .conteudo__home .icons__sociais {
+        font-size: 2em;
+    }
+
+    .conteudo__home .btn {
+        font-size: 2em;
+    }
+
+}
+
